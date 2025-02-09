@@ -47,6 +47,18 @@
             width: 100%;
             max-width: 250px;
         }
+        .section {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            font-size: 26px;
+            color: #333;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
@@ -56,106 +68,112 @@
     <p>
         This audio comparison is part of a master's thesis in which we fine-tuned the Parler Text-to-Speech (TTS) model
         to generate German speech. Through prompt engineering, we were able to enhance the model's ability to produce high-quality
-        German speech outputs. The following table shows different audio samples generated using two distinct sets of prompts: "Step=505" and "Step=2020".
+        German speech outputs. The following sections demonstrate the model's progress and the test to check the conditioning of speech rate.
     </p>
 
-    <!-- Passage before the first table -->
-    <p>
-        This table showcases the progress in the model's learning by comparing audio samples generated with different steps (505 and 2020).
-        It helps to demonstrate the improvements in pronunciation, fluency, and overall quality as the model is fine-tuned.
-    </p>
+    <!-- First Section: Showcases Learning Progress -->
+    <div class="section">
+        <div class="section-title">Learning Progress in Parler TTS</div>
+        <p>
+            This section showcases the progress in the model's learning by comparing audio samples generated with different steps (505 and 2020).
+            It helps to demonstrate the improvements in pronunciation, fluency, and overall quality as the model is fine-tuned.
+        </p>
 
-    <!-- First Table: Content, Description, GT, Step 505, Step 2020 -->
-    <table>
-        <thead>
-            <tr>
-                <th>Content</th>
-                <th>Description</th>
-                <th>GT</th>
-                <th>Step = 505</th>
-                <th>Step = 2020</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Sample 1</td>
-                <td>First comparison between Step=505 and Step=2020 for fine-tuned Parler TTS.</td>
-                <td>Ground Truth Audio</td>
-                <td>
-                    <audio controls>
-                        <source src="YOUR_AUDIO_URL_505_1" type="audio/mp3">
-                        Your browser does not support the audio element.
-                    </audio>
-                </td>
-                <td>
-                    <audio controls>
-                        <source src="YOUR_AUDIO_URL_2020_1" type="audio/mp3">
-                        Your browser does not support the audio element.
-                    </audio>
-                </td>
-            </tr>
-            <tr>
-                <td>Sample 2</td>
-                <td>Second comparison with different settings for both steps (505 vs. 2020).</td>
-                <td>Ground Truth Audio</td>
-                <td>
-                    <audio controls>
-                        <source src="YOUR_AUDIO_URL_505_2" type="audio/mp3">
-                        Your browser does not support the audio element.
-                    </audio>
-                </td>
-                <td>
-                    <audio controls>
-                        <source src="YOUR_AUDIO_URL_2020_2" type="audio/mp3">
-                        Your browser does not support the audio element.
-                    </audio>
-                </td>
-            </tr>
-            <tr>
-                <td>Sample 3</td>
-                <td>Third comparison showing a detailed analysis of the differences in German pronunciation.</td>
-                <td>Ground Truth Audio</td>
-                <td>
-                    <audio controls>
-                        <source src="YOUR_AUDIO_URL_505_3" type="audio/mp3">
-                        Your browser does not support the audio element.
-                    </audio>
-                </td>
-                <td>
-                    <audio controls>
-                        <source src="YOUR_AUDIO_URL_2020_3" type="audio/mp3">
-                        Your browser does not support the audio element.
-                    </audio>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+        <!-- First Table: Content, Description, GT, Step 505, Step 2020 -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Content</th>
+                    <th>Description</th>
+                    <th>GT</th>
+                    <th>Step = 505</th>
+                    <th>Step = 2020</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Sample 1</td>
+                    <td>First comparison between Step=505 and Step=2020 for fine-tuned Parler TTS.</td>
+                    <td>Ground Truth Audio</td>
+                    <td>
+                        <audio controls>
+                            <source src="YOUR_AUDIO_URL_505_1" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </td>
+                    <td>
+                        <audio controls>
+                            <source src="YOUR_AUDIO_URL_2020_1" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sample 2</td>
+                    <td>Second comparison with different settings for both steps (505 vs. 2020).</td>
+                    <td>Ground Truth Audio</td>
+                    <td>
+                        <audio controls>
+                            <source src="YOUR_AUDIO_URL_505_2" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </td>
+                    <td>
+                        <audio controls>
+                            <source src="YOUR_AUDIO_URL_2020_2" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sample 3</td>
+                    <td>Third comparison showing a detailed analysis of the differences in German pronunciation.</td>
+                    <td>Ground Truth Audio</td>
+                    <td>
+                        <audio controls>
+                            <source src="YOUR_AUDIO_URL_505_3" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </td>
+                    <td>
+                        <audio controls>
+                            <source src="YOUR_AUDIO_URL_2020_3" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
-    <!-- Passage before the second table -->
-    <p>
-        The following table tests whether speech rate can still be conditioned on the style prompt 'x' in the German Parler TTS model.
-        This will help us assess if the speech rate remains adjustable even after fine-tuning the model for specific styles.
-    </p>
+    <!-- Second Section: Speech Rate Conditioning -->
+    <div class="section">
+        <div class="section-title">Testing Speech Rate Conditioning</div>
+        <p>
+            This section tests whether speech rate can still be conditioned on the style prompt 'x' in the German Parler TTS model.
+            We assess whether the speech rate remains adjustable even after fine-tuning the model for specific styles.
+        </p>
 
-    <!-- Second Table: Speech Rate, German-Parler-TTS -->
-    <table>
-        <thead>
-            <tr>
-                <th>Speech Rate</th>
-                <th>German-Parler-TTS</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1.0x (Normal)</td>
-                <td>
-                    <audio controls>
-                        <source src="YOUR_AUDIO_URL_GERMAN_PARLER_TTS_1" type="audio/mp3">
-                        Your browser does not support the audio element.
-                    </audio>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+        <!-- Second Table: Speech Rate, German-Parler-TTS -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Speech Rate</th>
+                    <th>German-Parler-TTS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1.0x (Normal)</td>
+                    <td>
+                        <audio controls>
+                            <source src="YOUR_AUDIO_URL_GERMAN_PARLER_TTS_1" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
