@@ -263,6 +263,60 @@
             </tbody>
         </table>
     </div>
+
+    <!-- Third Section: Pitch Conditioning -->
+    <div class="section">
+        <div class="section-title">Testing Pitch Conditioning</div>
+        <p>
+            This section tests whether the pitch contour is changed when prompting different 'speech monotony':
+
+            <span style="color: gray;">"Thorsten's voice with a slightly fast pace in a {speech_monotony} tone. He is in a room with no noise, suggesting a high-quality recording."</span>
+        </p>
+
+
+        <!-- Second Table: Speech Rate, German-Parler-TTS -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Pitch</th>
+                    <th>Pitch contour</th>
+                    <th>German-Parler-TTS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monotone</td>
+                    <td><img src="./audio/f0.png"/></td>
+                    <td>
+                        <audio controls>
+                            <source src="./audio/f0.wav" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Slightly expressive and animated</td>
+                    <td><img src="./audio/f1.png"/></td>
+                    <td>
+                        <audio controls>
+                            <source src="./audio/f1.wav" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Very expressive and animated</td>
+                    <td><img src="./audio/f3.png"/></td>
+                    <td>
+                        <audio controls>
+                            <source src="./audio/f3.wav" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 
 </html>
