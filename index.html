@@ -217,10 +217,12 @@
     <div class="section">
         <div class="section-title">Testing Speech Rate Conditioning</div>
         <p>
-            This section tests whether speech rate can still be conditioned on the style prompt 'x' in the German Parler
-            TTS model.
-            We assess whether the speech rate remains adjustable even after fine-tuning the model for specific styles.
+            This section tests whether speech rate is changed for changing speech rate prompt:
+
+            <span style="color: gray;">"Thorsten delivers his speech at a {speech_rate} pace."</span>
         </p>
+        <img src="./audio/dur.png" alt="Italian Trulli">
+
 
         <!-- Second Table: Speech Rate, German-Parler-TTS -->
         <table>
@@ -232,10 +234,28 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>1.0x (Normal)</td>
+                    <td>Moderate Fast (2.06s)</td>
                     <td>
                         <audio controls>
-                            <source src="YOUR_AUDIO_URL_GERMAN_PARLER_TTS_1" type="audio/mp3">
+                            <source src="./audio/mf.wav" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Slightly Fast (1.88s)</td>
+                    <td>
+                        <audio controls>
+                            <source src="./audio/mf.wav" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fast (1.82s)</td>
+                    <td>
+                        <audio controls>
+                            <source src="./audio/f.wav" type="audio/mp3">
                             Your browser does not support the audio element.
                         </audio>
                     </td>
